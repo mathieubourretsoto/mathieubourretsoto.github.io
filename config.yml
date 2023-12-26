@@ -25,8 +25,8 @@ menu:
           weight: 4
 
 params:
-    description: "I am an Associate Professor of Economics at UC Santa Cruz. My research covers unemployment, economic slack, business cycles, and macroeconomic policy."
-    author: Pascal Michaillat
+    description: "I am a PhD Student"
+    author: Mathieu Bourret Soto
     googleAnalyticsID: "G-97G4MZ4061"
     DateFormat: "January 2006"
     defaultTheme: light
