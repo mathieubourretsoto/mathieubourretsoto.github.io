@@ -49,8 +49,8 @@ params:
     math: true
     profileMode:
           enabled: true
-          title: Pascal Michaillat
-          subtitle: "I am an Associate Professor of Economics at the University of California, Santa Cruz. I try to understand why economic slack—especially unemployment—exists; why it fluctuates over the business cycle; and how macroeconomic policies should respond to such cyclical fluctuations."
+          title: Mathieu Bourret Soto
+          subtitle: "PhD Student."
           imageUrl: "/picture.jpeg"
           imageWidth: 160
           imageHeight: 160
