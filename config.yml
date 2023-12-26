@@ -85,7 +85,7 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Pascal Michaillat"
+      text: "Mathieu Bourret Soto"
       icon: /favicon.ico
       iconHeight: 18
 
