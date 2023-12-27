@@ -28,6 +28,6 @@ UC Santa Cruz
 
 #### Office location
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203668.66166295038!2d-122.06180807362631!3d37.09743194165668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e4174e5b57475%3A0x97880f47ac591627!2sDepartment%20of%20Economics!5e0!3m2!1sen!2sus!4v1686026390720!5m2!1sen!2sus" width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45296.341336123056!2d-0.6465723621923167!3d44.80075386836739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54d893f3a2ea4d%3A0xbcb139a2a705ce34!2sFacult%C3%A9%20%C3%A9conomie%2C%20gestion%20et%20administration%20%C3%A9conomique%20et%20sociale%20-%20Universit%C3%A9%20de%20Bordeaux!5e0!3m2!1sfr!2sfr!4v1703669641551!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
