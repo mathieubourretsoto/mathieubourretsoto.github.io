@@ -3,26 +3,16 @@ title: "Location"
 aliases:
     - /contact.html
 hidemeta: true
-description: "Prof. Michaillat's mailing and office addresses at the University of California, Santa Cruz."
-
----
-
----
-
-#### Mailing address
-
-Economics Department  
-UC Santa Cruz  
-1156 High Street  
-Santa Cruz, CA 95064
+description: "Office address"
 
 ---
 
 #### Office address
 
-Room 437 (4th floor)  
-Engineering 2 Building  
-UC Santa Cruz
+Office H2-205   
+Bordeaux School of Economics
+16 avenue Léon Duguit
+33608 Pessac CEDEX, France
 
 ---
 
