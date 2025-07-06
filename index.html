@@ -34,6 +34,35 @@ nav .brand {
   cursor: default;
 }
 
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  #home {
+    flex-direction: column;
+    align-items: center !important;
+  }
+
+  .profile-pic {
+    float: none;
+    margin: 0 auto 1rem;
+  }
+
+  #home > div:first-child {
+    min-width: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  #home > div:last-child {
+    padding: 0 1rem;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -50,7 +79,7 @@ nav .brand {
 
 <section id="home" style="display: flex; max-width: 900px; margin: auto; gap: 2rem; align-items: flex-start;">
 
-  <div style="text-align: center; min-width: 300px;">
+  <div style="text-align: center; width: 100%;">
     <img src="Me.JPG" alt="Me" style="width: 180px; border-radius: 120px; display: block; margin: 0 auto 1rem;">
     <h1 style="margin: 0;">Mathieu Bourret Soto</h1>
     <p style="margin: 0 0 1rem;">PhD student, Bordeaux School of Economics</p>
