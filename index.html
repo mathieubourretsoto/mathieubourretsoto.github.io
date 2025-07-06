@@ -197,7 +197,7 @@ nav .brand {
     </button>
   </div>
   <div class="nav-links" id="navLinks">
-    <a href="#home">Home</a>
+    <a href="#" onclick="scrollToTop(event)">Home</a>
     <a href="#research">Research</a>
     <a href="#conferences">Talks</a>
     <a href="#teaching">Teaching</a>
@@ -340,6 +340,19 @@ nav .brand {
     navLinks.classList.toggle("show");
   }
 </script>
+
+<script>
+  function scrollToTop(event) {
+    event.preventDefault(); // empêche le comportement par défaut du lien
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("show");
+  }
+</script>
+
 
 </body>
 </html>
