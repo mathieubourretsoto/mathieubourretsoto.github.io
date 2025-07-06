@@ -7,184 +7,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mathieu Bourret Soto</title>
-  <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: #f7f7f7; color: #333; }
-    header { background: #545C3D; color: white; padding: 1rem 2rem; position: sticky; top: 0; }
-    nav a { color: white; margin-right: 1.5rem; text-decoration: none; font-weight: 500; }
-    nav a:hover { text-decoration: underline; }
-    section { padding: 2rem; max-width: 900px; margin: auto; }
-    h1, h2 { color: #1f2a44; }
-    .profile-pic { width: 180px; border-radius: 120px; float: left; margin-right: 1rem; }
-    footer { text-align: center; padding: 1rem; background: #eee; font-size: 0.9rem; color: #666; }
-
-    nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-nav .brand {
-  margin-right: auto;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: white;
-  cursor: default;
-}
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-  }
-
-  #home {
-    flex-direction: column;
-    align-items: center !important;
-  }
-
-  .profile-pic {
-    float: none;
-    margin: 0 auto 1rem;
-  }
-
-  #home > div:first-child {
-    min-width: auto;
-    width: 100%;
-    text-align: center;
-  }
-
-  #home > div:last-child {
-    padding: 0 1rem;
-  }
-}
-.navbar {
-  display: flex;
-  flex-direction: column;
-  background: #545C3D;
-  color: white;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.navbar-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.brand {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: white;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 0.5rem;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #545C3D;
-    padding: 1rem 0;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-}
-
-
-.navbar .brand {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #545C3D;
-    position: absolute;
-    top: 100%;
-    left: 50;
-    padding: 1rem 2rem;
-  }
   
-  .nav-links.show {
-    display: flex;
-  }
+  
+  
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f7f7;
+      color: #333;
+    }
 
-  .navbar {
-    flex-wrap: wrap;
-  }
-}
+    .navbar {
+      background: #545C3D;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
+    .navbar-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
+    .brand {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .navbar-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
@@ -192,19 +93,19 @@ nav .brand {
 <nav class="navbar">
   <div class="navbar-top">
     <span class="brand">Mathieu Bourret Soto</span>
+    <div class="nav-links" id="navLinks">
+      <a href="#" onclick="scrollToTop(event); handleNavClick()">Home</a>
+      <a href="#research" onclick="handleNavClick()">Research</a>
+      <a href="#conferences" onclick="handleNavClick()">Talks</a>
+      <a href="#teaching" onclick="handleNavClick()">Teaching</a>
+      <a href="#contact" onclick="handleNavClick()">Contact</a>
+    </div>
     <button class="menu-toggle" onclick="toggleMenu()">
       <i class="fas fa-bars"></i>
     </button>
   </div>
-  <div class="nav-links" id="navLinks">
-    <a href="#" onclick="scrollToTop(event); handleNavClick()">Home</a>
-    <a href="#research" onclick="handleNavClick()">Research</a>
-    <a href="#conferences" onclick="handleNavClick()">Talks</a>
-    <a href="#teaching" onclick="handleNavClick()">Teaching</a>
-    <a href="#contact" onclick="handleNavClick()">Contact</a>
-
-  </div>
 </nav>
+
 
 
 
