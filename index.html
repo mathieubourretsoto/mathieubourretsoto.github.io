@@ -272,11 +272,12 @@
       navLinks.classList.toggle("show");
     }
 
-    function scrollToTop(event) {
+   function scrollToTop(event) {
   event.preventDefault();
-  history.pushState(null, null, '#home');
-  document.getElementById("home").scrollIntoView({ behavior: 'smooth' });
-    }
+  history.pushState(null, null, '/');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+  }
 
 
     function handleNavClick() {
