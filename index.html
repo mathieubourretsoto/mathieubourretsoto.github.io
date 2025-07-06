@@ -273,9 +273,11 @@
     }
 
     function scrollToTop(event) {
-      event.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  event.preventDefault();
+  history.pushState(null, null, '#home');
+  document.getElementById("home").scrollIntoView({ behavior: 'smooth' });
     }
+
 
     function handleNavClick() {
       const navLinks = document.getElementById("navLinks");
