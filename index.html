@@ -197,11 +197,12 @@ nav .brand {
     </button>
   </div>
   <div class="nav-links" id="navLinks">
-    <a href="#" onclick="scrollToTop(event)">Home</a>
-    <a href="#research">Research</a>
-    <a href="#conferences">Talks</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#contact">Contact</a>
+    <a href="#" onclick="scrollToTop(event); handleNavClick()">Home</a>
+    <a href="#research" onclick="handleNavClick()">Research</a>
+    <a href="#conferences" onclick="handleNavClick()">Talks</a>
+    <a href="#teaching" onclick="handleNavClick()">Teaching</a>
+    <a href="#contact" onclick="handleNavClick()">Contact</a>
+
   </div>
 </nav>
 
@@ -339,17 +340,17 @@ nav .brand {
     const navLinks = document.getElementById("navLinks");
     navLinks.classList.toggle("show");
   }
-</script>
 
-<script>
   function scrollToTop(event) {
-    event.preventDefault(); // empêche le comportement par défaut du lien
+    event.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function toggleMenu() {
+  function handleNavClick() {
     const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("show");
+    if (window.innerWidth <= 768) {
+      navLinks.classList.remove("show");
+    }
   }
 </script>
 
