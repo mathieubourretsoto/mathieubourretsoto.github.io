@@ -7,21 +7,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mathieu Bourret Soto</title>
-  
-  
-  
-   <style>
+
+  <style>
     body {
-
-      main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2rem;
-}
-section {
-  margin-bottom: 3rem;
-}
-
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #f7f7f7;
@@ -32,9 +20,11 @@ section {
       background: #545C3D;
       color: white;
       padding: 1rem 2rem;
-      position: sticky;
+      position: fixed;
       top: 0;
+      width: 100%;
       z-index: 999;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .navbar-top {
@@ -74,7 +64,22 @@ section {
       cursor: pointer;
     }
 
-    /* RESPONSIVE */
+    main {
+      max-width: 1000px;
+      margin: 120px auto 0; /* Adjusted for fixed navbar */
+      padding: 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      padding-top: 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
@@ -95,70 +100,70 @@ section {
         flex-direction: column;
         align-items: flex-start;
       }
+
+      #home {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #home img {
+        margin-bottom: 1rem;
+      }
+
+      #home > div:last-child {
+        text-align: left;
+        margin-top: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-<nav class="navbar">
-  <div class="navbar-top">
-    <span class="brand">Mathieu Bourret Soto</span>
-    <div class="nav-links" id="navLinks">
-      <a href="#" onclick="scrollToTop(event); handleNavClick()">Home</a>
-      <a href="#research" onclick="handleNavClick()">Research</a>
-      <a href="#conferences" onclick="handleNavClick()">Talks</a>
-      <a href="#teaching" onclick="handleNavClick()">Teaching</a>
-      <a href="#contact" onclick="handleNavClick()">Contact</a>
+  <nav class="navbar">
+    <div class="navbar-top">
+      <span class="brand">Mathieu Bourret Soto</span>
+      <div class="nav-links" id="navLinks">
+        <a href="#" onclick="scrollToTop(event); handleNavClick()">Home</a>
+        <a href="#research" onclick="handleNavClick()">Research</a>
+        <a href="#conferences" onclick="handleNavClick()">Talks</a>
+        <a href="#teaching" onclick="handleNavClick()">Teaching</a>
+        <a href="#contact" onclick="handleNavClick()">Contact</a>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-    <button class="menu-toggle" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-</nav>
-
-
-
-
-</header>
+  </nav>
 
   <main>
+    <section id="home" style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+      <div style="text-align: center; flex: 1 1 250px;">
+        <img src="Me.JPG" alt="Me" style="width: 180px; border-radius: 120px; display: block; margin: 0 auto 1rem;">
+        <h1 style="margin: 0;">Mathieu Bourret Soto</h1>
+        <p style="margin: 0 0 1rem;">PhD student, Bordeaux School of Economics</p>
+        <a href="Resume_MBS_en.pdf" target="_blank" style="display: inline-block; padding: 0.5rem 1rem; background-color: #333333; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s;">My CV here</a>
+        <br><br>
+        <div>
+          <a href="mailto:mathieu.bourret@u-bordeaux.fr" target="_blank" style="margin: 0 10px; color: inherit; text-decoration: none;">
+            <i class="fas fa-envelope fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mathieu-bourret-soto/" target="_blank" style="margin: 0 10px; color: inherit; text-decoration: none;">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://orcid.org/0000-0002-6090-420X" target="_blank" style="margin: 0 10px; color: inherit; text-decoration: none;">
+            <i class="fab fa-orcid fa-2x"></i>
+          </a>
+          <a href="https://github.com/mathieubourretsoto" target="_blank" style="margin: 0 10px; color: inherit; text-decoration: none;">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+        </div>
+      </div>
 
-
-<section id="home" style="display: flex; max-width: 900px; margin: auto; gap: 2rem; align-items: flex-start;">
-
-  <div style="text-align: center; width: 100%;">
-    <img src="Me.JPG" alt="Me" style="width: 180px; border-radius: 120px; display: block; margin: 0 auto 1rem;">
-    <h1 style="margin: 0;">Mathieu Bourret Soto</h1>
-    <p style="margin: 0 0 1rem;">PhD student, Bordeaux School of Economics</p>
-       <a href="Resume_MBS_en.pdf" target="_blank" style="display: inline-block; padding: 0.5rem 1rem; background-color: #333333; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;"> My CV here</a>
-    <br> <br>
-    <div>
-      <a href="mailto:mathieu.bourret@u-bordeaux.fr" target="_blank" style="margin: 0 10px; color: inherit; text-decoration: none;">
-        <i class="fas fa-envelope fa-2x"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/mathieu-bourret-soto/" target="_blank" style="margin: 0 10px; color: inherit; text-decoration: none;">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="https://orcid.org/0000-0002-6090-420X" target="_blank" style="margin: 0 10px; color: inherit; text-decoration: none;">
-        <i class="fab fa-orcid fa-2x"></i>
-      </a>
-      <a href="https://github.com/mathieubourretsoto" target="_blank" style="margin: 0 10px; color: inherit; text-decoration: none;">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-
-
-    </div>
-  </div>
-
-  <div style="flex-grow: 1;">
-    <br> <br> <br>
-    <p>Hi there, and welcome to my website!</p>
-    <p>I’m Mathieu Bourret Soto, a third-year PhD student at the Bordeaux School of Economics (University of Bordeaux). I study the causes and consequences of conflict in Latin America, with an empirical approach based on political economy and development economics. I’m also interested in how people and communities adapt to climate change, using a more  interdisciplinary lens. From March to July 2025, I’m a visiting scholar at NOVAFRICA (Nova SBE) as part of my PhD.</p>
-    <p>Feel free to check out my work, happy to chat about it anytime!</p>
-    
-  </div>
-  
-</section>
+      <div style="flex: 2 1 300px;">
+        <p>Hi there, and welcome to my website!</p>
+        <p>I’m Mathieu Bourret Soto, a third-year PhD student at the Bordeaux School of Economics (University of Bordeaux). I study the causes and consequences of conflict in Latin America, with an empirical approach based on political economy and development economics. I’m also interested in how people and communities adapt to climate change, using a more interdisciplinary lens. From March to July 2025, I’m a visiting scholar at NOVAFRICA (Nova SBE) as part of my PhD.</p>
+        <p>Feel free to check out my work, happy to chat about it anytime!</p>
+      </div>
+    </section>
 
   
   <section id="research">
@@ -247,29 +252,27 @@ section {
 
   </main>
 
-  <footer>
+  <footer style="text-align:center; padding: 2rem; background:#eee;">
     &copy; 2025 Mathieu Bourret Soto
   </footer>
 
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("show");
-  }
-
-  function scrollToTop(event) {
-    event.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  function handleNavClick() {
-    const navLinks = document.getElementById("navLinks");
-    if (window.innerWidth <= 768) {
-      navLinks.classList.remove("show");
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
     }
-  }
-</script>
 
+    function scrollToTop(event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
+    function handleNavClick() {
+      const navLinks = document.getElementById("navLinks");
+      if (window.innerWidth <= 768) {
+        navLinks.classList.remove("show");
+      }
+    }
+  </script>
 </body>
 </html>
