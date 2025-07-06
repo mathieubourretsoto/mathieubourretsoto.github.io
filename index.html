@@ -63,8 +63,7 @@ nav .brand {
 }
 .navbar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   background: #545C3D;
   color: white;
   padding: 1rem 2rem;
@@ -72,6 +71,64 @@ nav .brand {
   top: 0;
   z-index: 999;
 }
+
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #545C3D;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
 
 .navbar .brand {
   font-weight: bold;
@@ -117,7 +174,7 @@ nav .brand {
     left: 50;
     padding: 1rem 2rem;
   }
-
+  
   .nav-links.show {
     display: flex;
   }
