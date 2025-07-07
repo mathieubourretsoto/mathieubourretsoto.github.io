@@ -118,14 +118,16 @@
       text-decoration: underline;
     }
 
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
 
     main {
       max-width: 1000px;
@@ -320,25 +322,32 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById("navLinks");
-      navLinks.classList.toggle("show");
-    }
-
-   function scrollToTop(event) {
-  event.preventDefault();
-  history.pushState(null, null, '/');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("show");
   }
 
+  function scrollToTop(event) {
+    event.preventDefault();
+    history.pushState(null, null, '/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
-    function handleNavClick() {
-      const navLinks = document.getElementById("navLinks");
-      if (window.innerWidth <= 768) {
-        navLinks.classList.remove("show");
-      }
+  function handleNavClick() {
+    const navLinks = document.getElementById("navLinks");
+    if (window.innerWidth <= 768) {
+      navLinks.classList.remove("show");
     }
-  </script>
+  }
+
+  document.addEventListener('click', function (e) {
+    const navLinks = document.getElementById("navLinks");
+    const menuButton = document.querySelector(".menu-toggle");
+    if (!navLinks.contains(e.target) && !menuButton.contains(e.target)) {
+      navLinks.classList.remove("show");
+    }
+  });
+</script>
+
 </body>
 </html>
