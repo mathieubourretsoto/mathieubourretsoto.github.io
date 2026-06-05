@@ -13,13 +13,16 @@
 
   <style>
     :root {
-      --text: #1f2328;
-      --muted: #6b7280;
-      --link: #2563eb;
-      --accent: #2563eb;
-      --rule: #ececf0;
-      --bg: #ffffff;
-      --chip: #f3f4f6;
+      --text: #2b2622;
+      --muted: #7a6f64;
+      --link: #c2562d;
+      --accent: #c2562d;
+      --accent-dark: #a8431f;
+      --rule: #ece3d8;
+      --bg: #faf6f0;
+      --card: #fffdfa;
+      --chip: #f6e7dd;
+      --chip-hover: #efd6c5;
     }
 
     * { box-sizing: border-box; }
@@ -49,7 +52,9 @@
 
     /* ---------- Navbar ---------- */
     .navbar {
-      background: var(--bg);
+      background: rgba(250, 246, 240, 0.85);
+      backdrop-filter: saturate(180%) blur(10px);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
       border-bottom: 1px solid var(--rule);
       position: sticky;
       top: 0;
@@ -153,8 +158,13 @@
     #home {
       display: flex;
       gap: 2.5rem;
-      align-items: flex-start;
+      align-items: center;
       flex-wrap: wrap;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      padding: 2.25rem;
+      box-shadow: 0 6px 24px rgba(74, 53, 38, 0.06);
     }
 
     #home .photo {
@@ -169,7 +179,9 @@
       border-radius: 50%;
       display: block;
       margin: 0 auto 1.1rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+      box-shadow: 0 4px 18px rgba(74, 53, 38, 0.18);
+      border: 3px solid var(--card);
+      outline: 2px solid var(--accent);
     }
 
     #home .intro {
@@ -194,7 +206,7 @@
       transition: background 0.15s ease, transform 0.15s ease;
     }
     .cv-link:hover {
-      background: #1d4ed8;
+      background: var(--accent-dark);
       text-decoration: none;
       transform: translateY(-1px);
     }
@@ -223,8 +235,8 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      color: var(--accent);
-      background: #eff4ff;
+      color: var(--accent-dark);
+      background: var(--chip);
       padding: 0.12rem 0.55rem;
       border-radius: 999px;
       white-space: nowrap;
@@ -233,7 +245,7 @@
       transition: background 0.15s ease;
     }
     .paper-link:hover {
-      background: #dbe6ff;
+      background: var(--chip-hover);
       text-decoration: none;
     }
 
