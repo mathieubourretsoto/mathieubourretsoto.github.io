@@ -218,6 +218,11 @@
     }
     .social a:first-child { margin-left: 0; }
     .social a:hover { color: var(--accent); }
+    .social .gs-icon {
+      width: 1.18rem;
+      height: 1.18rem;
+      vertical-align: -0.18rem;
+    }
 
     /* ---------- Lists ---------- */
     ul {
@@ -247,6 +252,60 @@
     .paper-link:hover {
       background: var(--chip-hover);
       text-decoration: none;
+    }
+
+    /* ---------- Research fields ---------- */
+    .fields {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+    .fields span {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      background: var(--chip);
+      border: 1px solid var(--chip-hover);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+    }
+
+    /* ---------- Abstract toggle ---------- */
+    .abstract {
+      margin-top: 0.5rem;
+    }
+    .abstract summary {
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent-dark);
+      width: fit-content;
+    }
+    .abstract summary::-webkit-details-marker { display: none; }
+    .abstract summary::before {
+      content: "\25B8";
+      display: inline-block;
+      transition: transform 0.15s ease;
+      font-size: 0.9em;
+    }
+    .abstract[open] summary::before { transform: rotate(90deg); }
+    .abstract summary:hover { color: var(--accent); }
+    .abstract p {
+      margin: 0.55rem 0 0;
+      padding-left: 0.85rem;
+      border-left: 2px solid var(--chip-hover);
+      font-size: 0.92rem;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 68ch;
     }
 
     /* ---------- Footer ---------- */
@@ -315,6 +374,8 @@
         <a class="cv-link" href="Resume_MBS_en.pdf" target="_blank">Curriculum Vitae</a>
         <div class="social">
           <a href="mailto:mathieu.bourret@u-bordeaux.fr" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
+          <!-- TODO: replace # with your Google Scholar profile URL -->
+          <a href="#" target="_blank" aria-label="Google Scholar"><svg class="gs-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
           <a href="https://www.linkedin.com/in/mathieu-bourret-soto/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
           <a href="https://orcid.org/0000-0002-6090-420X" target="_blank" aria-label="ORCID"><i class="fab fa-orcid fa-lg"></i></a>
           <a href="https://github.com/mathieubourretsoto" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
@@ -325,6 +386,13 @@
         <p>Hi there, and welcome to my website!</p>
         <p>I&rsquo;m Mathieu Bourret Soto, a last-year PhD student at Bordeaux School of Economics (University of Bordeaux). My doctoral research examines the political economy of conflict and peacebuilding, using empirical methods to analyze the causes and consequences of violence in Latin America. I&rsquo;m also interested in climate change adaptation, using a more interdisciplinary lens. From March to July 2025, I was a visiting scholar at NOVAFRICA (Nova SBE).</p>
         <p>Feel free to check out my work, happy to chat about it anytime!</p>
+        <p class="fields">
+          <span>Political Economy</span>
+          <span>Conflict &amp; Peacebuilding</span>
+          <span>Development</span>
+          <span>Latin America</span>
+          <span>Climate &amp; Health</span>
+        </p>
       </div>
     </section>
 
@@ -336,10 +404,18 @@
         <li>
           <strong>Prevalence and factors associated with the adoption of heat-adaptive behaviors among residents of a French southern region</strong>, with Marl&egrave;ne Guillon. <em>Journal of Environmental Psychology, 109(102883), 2026</em>.
           <a class="paper-link" href="https://doi.org/10.1016/j.jenvp.2025.102883" target="_blank">paper</a>
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <p>Heatwaves are becoming more frequent and intense, making it essential to examine individual protective strategies against their negative health effects. We conducted a survey (N=1,515) in summer 2022 to investigate the prevalence of eight heat-adaptive behaviors (HABs) and the factors associated with their adoption. The population implemented the eight HABs heterogeneously, with closing shutters, blinds, or curtains and going to a cooler or air-conditioned place being the most and least adopted HABs. Using the Protective Action Decision Model (PADM), we found that greater perceived efficacy and descriptive norms were associated with higher adoption of HABs, as measured by an adaptation index, while greater perceived barriers led to lower adaptation. Conversely, demographic characteristics and self-reported health did not seem to be important predictors of adaptation. Our disaggregated analysis …</p>
+          </details>
         </li>
         <li>
           <strong>What drives adaptive behaviours during heatwaves? A systematic review with a meta-analysis</strong>, with Marl&egrave;ne Guillon. <em>Climate Policy, 24(8), 2024</em>.
           <a class="paper-link" href="https://doi.org/10.1080/14693062.2024.2388225" target="_blank">paper</a>
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <p>Global warming will lead to more frequent and intense heatwaves across all regions of the world in the coming decades. Adaptation at the individual level plays a key role in helping populations cope with these extreme events. This study undertakes a systematic review of the academic literature on the determinants of heat-adaptive behaviours (HABs) following the Preferred Reporting Items for Systematic reviews and Meta-Analyses (PRISMA) guidelines. A Boolean algorithm was used on two online databases (PubMed and Web of Science Core Collection) to retrieve 73 relevant, quantitative, peer-reviewed papers. All included studies focus on high-income economies (N = 48) or middle-income economies (MIEs, N = 25). A meta-analysis was performed on 34 studies using a random-effects model, with an emphasis on heat-related perceptions (perceived efficacy, risk and threat) and heat-related knowledge …</p>
+          </details>
         </li>
       </ul>
 
@@ -349,7 +425,12 @@
       <ul>
         <li>
           <strong><i>This is our Legacy</i>: Youth Exposure to Repression and Trust in Institutions</strong>.
-          <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4804803" target="_blank">paper</a>
+          <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4804803" target="_blank">ssrn</a>
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <p>This paper examines how exposure to political repression during youth affects long-term trust in public institutions in Chile, drawing on the impressionable years hypothesis (IYH). Focusing on the 1973 coup and the ensuing 17-year dictatorship, I exploit variation in proximity to pre-1970 military bases as a proxy for local repression intensity. The results indicate that individuals who were in their critical period (ages 17-25) at the time of the 1973 coup exhibit significantly lower trust in the Carabineros (national police) decades later, with similarly negative effects observed for those who were 10-16 at the time. By contrast, trust in representative institutions (the government and the presidency) is not significantly affected, indicating institution-specific legacies. I also consider potential channels such as migration history, university attendance, and residence in the capital, finding no evidence that these factors moderate the results. Overall, the findings show that early-life exposure to repression can durably erode institutional trust, underscoring the long shadow of political violence on democratic consolidation.
+</p>
+          </details>
         </li>
         <li>
           <strong><i>Reunited?</i> Post-conflict attitudes toward former FARC</strong>, with Thibaut Plassot-Sansans.
