@@ -208,17 +208,21 @@
       transform: translateY(-1px);
     }
 
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.85rem;
+      flex-wrap: nowrap;
+    }
     .social a {
       color: var(--muted);
-      margin: 0 0.55rem;
       transition: color 0.15s ease;
     }
-    .social a:first-child { margin-left: 0; }
     .social a:hover { color: var(--accent); }
     .social .gs-icon {
       width: 1.18rem;
       height: 1.18rem;
-      vertical-align: -0.18rem;
     }
 
     ul {
