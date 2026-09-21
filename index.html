@@ -191,21 +191,36 @@
       font-size: 1rem;
     }
 
-    .cv-link {
-      display: inline-block;
+    .doc-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
       margin-bottom: 1.1rem;
+    }
+    .doc-btn {
+      display: block;
+      text-align: center;
       font-size: 0.88rem;
       font-weight: 600;
-      background: var(--accent);
-      padding: 0.5rem 1.15rem;
+      padding: 0.5rem 1rem;
       border-radius: 8px;
-      color: #fff;
-      transition: background 0.15s ease, transform 0.15s ease;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+      transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
     }
-    .cv-link:hover {
-      background: var(--accent-dark);
+    .doc-btn:hover {
+      background: var(--chip);
       text-decoration: none;
       transform: translateY(-1px);
+    }
+    .doc-btn.primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .doc-btn.primary:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
     }
 
     .social {
@@ -368,7 +383,10 @@
         <img src="Me.JPG" alt="Mathieu Bourret Soto">
         <h1>Mathieu Bourret Soto</h1>
         <p class="affiliation">PhD Candidate, Bordeaux School of Economics</p>
-        <a class="cv-link" href="Resume_MBS_en.pdf" target="_blank">Curriculum Vitae</a>
+        <div class="doc-links">
+          <a class="doc-btn primary" href="JMP_MBS.pdf" target="_blank">Job Market Paper</a>
+          <a class="doc-btn" href="Resume_MBS_en.pdf" target="_blank">Curriculum Vitae</a>
+        </div>
         <div class="social">
           <a href="mailto:mathieu.bourret@u-bordeaux.fr" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
           <a href="https://scholar.google.com/citations?user=rbShwE0AAAAJ&hl=fr&oi=ao" target="_blank" aria-label="Google Scholar"><svg class="gs-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
@@ -381,6 +399,7 @@
       <div class="intro">
   <p>Hi there, and welcome to my website!</p>
   <p>I&rsquo;m Mathieu Bourret Soto, a final-year PhD candidate at the Bordeaux School of Economics (University of Bordeaux), where I expect to defend my thesis in November 2026. My doctoral research examines the political economy of conflict and peacebuilding, using quasi-experimental and microeconometric methods to analyse the causes and consequences of violence in Latin America. I&rsquo;m also interested in climate change adaptation, using a more interdisciplinary lens. From March to July 2025, I was a visiting scholar at NOVAFRICA (Nova SBE).</p>
+  <p>I am on the 2026&ndash;2027 academic job market; my job market paper is available <a href="JMP_MBS.pdf" target="_blank">here</a>.</p>
   <p>Feel free to check out my work, happy to chat about it anytime!</p>
 </div>
         <p class="fields">
@@ -394,6 +413,18 @@
 
     <section id="research">
       <h2>Research</h2>
+
+      <h3>Job Market Paper</h3>
+      <ul>
+        <li>
+          <strong>Civic Expansion and Targeted Violence under Armed Governance: Evidence from Colombia</strong>.
+          <a class="paper-link" href="JMP_MBS.pdf" target="_blank">paper</a>
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <p>Do grassroots civic institutions protect local leaders from violence, or expose them? Using Colombia&rsquo;s <i>Juntas de Acci&oacute;n Comunal</i> (JACs) and a novel 65-year administrative panel, I exploit within-municipality variation in annual JAC registrations in a continuous-treatment difference-in-differences design. On the full panel, civic expansion raises subsequent targeted killings of social leaders: the average causal effect is positive and significant, on the order of one additional killing for every ninety new JACs. This effect is concentrated in conflict municipalities and is neutral or protective where armed groups are absent; it is strongest where armed governance is durable, a descriptive gradient identified under stronger assumptions than the baseline. A second finding bounds the threat: killings do not reduce subsequent JAC registrations at any horizon, so targeting does not suppress the formation of new boards, though registration is an imperfect proxy for whether they keep functioning. A leader is targeted for their role in the network, not as an individual, so collective protection is the relevant policy lever.</p>
+          </details>
+        </li>
+      </ul>
 
       <h3>Publications</h3>
       <ul>
@@ -426,7 +457,7 @@
           <a class="paper-link" href="https://doi.org/10.1080/14693062.2024.2388225" target="_blank">paper</a>
           <details class="abstract">
             <summary>Abstract</summary>
-            <p>Global warming will lead to more frequent and intense heatwaves across all regions of the world in the coming decades. Adaptation at the individual level plays a key role in helping populations cope with these extreme events. This study undertakes a systematic review of the academic literature on the determinants of heat-adaptive behaviours (HABs) following the Preferred Reporting Items for Systematic reviews and Meta-Analyses (PRISMA) guidelines. A Boolean algorithm was used on two online databases (PubMed and Web of Science Core Collection) to retrieve 73 relevant, quantitative, peer-reviewed papers. All included studies focus on high-income economies (N = 48) or middle-income economies (MIEs, N = 25). A meta-analysis was performed on 34 studies using a random-effects model, with an emphasis on heat-related perceptions (perceived efficacy, risk and threat) and heat-related knowledge (HRK), as these variables are the most likely levers of behavioural change. Perceived efficacy, HRK, perceived threat and gender (i.e. being female) are positively associated with the adoption of HABs. A moderation analysis reveals heterogeneity in the effect of these variables by country income group, with low HRK and perceived threat constituting stronger barriers to HABs in MIEs. This study also highlights various gaps in the current literature, regarding the populations studied, the statistical methods used, and the lack of standardization of HABs and perception concepts.</p>
+            <p>Global warming will lead to more frequent and intense heatwaves across all regions of the world in the coming decades. Adaptation at the individual level plays a key role in helping populations cope with these extreme events. This study undertakes a systematic review of the academic literature on the determinants of heat-adaptive behaviours (HABs) following the Preferred Reporting Items for Systematic reviews and Meta-Analyses (PRISMA) guidelines. A Boolean algorithm was used on two online databases (PubMed and Web of Science Core Collection) to retrieve 73 relevant, quantitative, peer-reviewed papers. All included studies focus on high-income economies (N = 48) or middle-income economies (MIEs, N = 25). A meta-analysis was performed on 34 studies using a random-effects model, with an emphasis on heat-related perceptions (perceived efficacy, risk and threat) and heat-related knowledge (HRK), as these variables are the most likely levers of behavioural change. Perceived efficacy, HRK, perceived threat and gender (i.e. being female) are positively associated with the adoption of HABs. A moderation analysis reveals heterogeneity in the effect of these variables by country income group, with low HRK and perceived threat constituting stronger barriers to HABs in MIEs. This study also highlights various gaps in the current literature, regarding the populations studied, the statistical methods used, and the lack of standardization of HABs and perception concepts.</p>
           </details>
         </li>
       </ul>
@@ -437,9 +468,6 @@
       <ul>
         <li>
           <strong><i>Reunited?</i> Post-conflict attitudes toward former FARC</strong>, with Thibaut Plassot-Sansans.
-        </li>
-        <li>
-          <strong>Grassroots Institutions and Selective Violence: Evidence from Communal Action Boards in Colombia</strong>.
         </li>
         <li>
           <strong>Fear of Crime in Latin America&rsquo;s secondary cities: a mixed methods approach</strong>, with Matthieu Cl&eacute;ment and Thibaut Plassot-Sansans.
