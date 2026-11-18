@@ -264,15 +264,6 @@
       scroll-margin-top: 4.5rem;
     }
 
-    .news {
-      font-size: 0.92rem;
-      background: var(--chip);
-      border-left: 3px solid var(--accent);
-      border-radius: 6px;
-      padding: 0.5rem 0.85rem;
-      margin: 0 0 1.1rem;
-    }
-    .news strong { color: var(--accent-dark); }
 
     .talks-year {
       margin-top: 1.2rem;
@@ -445,7 +436,6 @@
       </div>
 
       <div class="intro">
-        <p class="news"><strong>News.</strong> November 2026: I defended my PhD at the Bordeaux School of Economics.</p>
         <p>Hi there, and welcome to my website!</p>
   <p>I&rsquo;m Mathieu Bourret Soto. I hold a PhD in Economics from the <a href="https://www.bse.u-bordeaux.fr/" target="_blank" rel="noopener">Bordeaux School of Economics</a> (University of Bordeaux), where I defended my thesis on 13 November 2026. My doctoral research examines the political economy of conflict and peacebuilding, using quasi-experimental and microeconometric methods to analyse the causes and consequences of violence in Latin America. I&rsquo;m also interested in climate change adaptation, using a more interdisciplinary lens. From March to July 2025, I was a visiting scholar at <a href="https://novafrica.org/" target="_blank" rel="noopener">NOVAFRICA</a> (Nova SBE).</p>
   <p>I am on the 2026&ndash;2027 academic job market. Civic organisation is usually seen as a shield against violence; in my <a href="JMP_MBS.pdf" target="_blank" rel="noopener">job market paper</a>, I show that in Colombia it can also expose, as the expansion of grassroots civic institutions raises targeted killings of social leaders where armed groups hold territory, while remaining neutral or protective elsewhere.</p>  
@@ -627,7 +617,6 @@
       }
     });
 
-    // Highlight the nav link of the section currently on screen
     const navAnchors = document.querySelectorAll('.nav-links a');
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
