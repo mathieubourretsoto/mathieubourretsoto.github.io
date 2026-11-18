@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathieu Bourret Soto</title>
+  <meta name="description" content="Mathieu Bourret Soto, PhD in Economics (Bordeaux School of Economics). Applied microeconomics and political economy of conflict and peacebuilding in Latin America.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mathieu Bourret Soto">
+  <meta property="og:description" content="PhD in Economics, Bordeaux School of Economics. Political economy of conflict and peacebuilding in Latin America.">
+  <meta property="og:url" content="https://mathieubourretsoto.github.io/">
+  <meta property="og:image" content="https://mathieubourretsoto.github.io/Me.JPG">
   <meta name="google-site-verification" content="ylHNSvxtkKM2k_xig5JByxR-Zml3L1guYkNLEDFRhYs" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="icon.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mathieu Bourret Soto</title>
 
   <style>
     :root {
@@ -235,10 +240,45 @@
       transition: color 0.15s ease;
     }
     .social a:hover { color: var(--accent); }
+    .social .icon {
+      width: 1.3rem;
+      height: 1.3rem;
+      display: block;
+    }
     .social .gs-icon {
       width: 1.18rem;
       height: 1.18rem;
+      display: block;
     }
+    .menu-toggle .icon {
+      width: 1.3rem;
+      height: 1.3rem;
+      display: block;
+    }
+
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    section[id] {
+      scroll-margin-top: 4.5rem;
+    }
+
+    .news {
+      font-size: 0.92rem;
+      background: var(--chip);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 0.5rem 0.85rem;
+      margin: 0 0 1.1rem;
+    }
+    .news strong { color: var(--accent-dark); }
+
+    .talks-year {
+      margin-top: 1.2rem;
+    }
+    .talks-year:first-of-type { margin-top: 0; }
+    .talks ul li { margin-bottom: 0.45rem; }
 
     ul {
       padding-left: 1.2rem;
@@ -273,7 +313,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-top: 1.25rem;
+      margin: 1.25rem 0 0;
     }
     .fields span {
       font-size: 0.78rem;
@@ -357,6 +397,14 @@
       }
       #home .photo { flex: none; }
       #home .intro { text-align: left; }
+
+      .abstract p {
+        width: 100%;
+        text-align: left;
+      }
+
+      main { padding-top: 1.5rem; }
+      #home { padding: 1.5rem; }
     }
   </style>
 </head>
@@ -371,8 +419,8 @@
         <a href="#teaching" onclick="handleNavClick()">Teaching</a>
         <a href="#contact" onclick="handleNavClick()">Contact</a>
       </div>
-      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
-        <i class="fas fa-bars"></i>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
       </button>
     </div>
   </nav>
@@ -380,28 +428,28 @@
   <main>
     <section id="home">
       <div class="photo">
-        <img src="Me.JPG" alt="Mathieu Bourret Soto">
+        <img src="Me.JPG" alt="Mathieu Bourret Soto" width="170" height="170">
         <h1>Mathieu Bourret Soto</h1>
-        <p class="affiliation">PhD Candidate, Bordeaux School of Economics</p>
+        <p class="affiliation">PhD in Economics, <a href="https://www.bse.u-bordeaux.fr/" target="_blank" rel="noopener">Bordeaux School of Economics</a></p>
         <div class="doc-links">
-          <a class="doc-btn primary" href="JMP_MBS.pdf" target="_blank">Job Market Paper</a>
-          <a class="doc-btn" href="Resume_MBS_en.pdf" target="_blank">Curriculum Vitae</a>
+          <a class="doc-btn primary" href="JMP_MBS.pdf" target="_blank" rel="noopener">Job Market Paper</a>
+          <a class="doc-btn" href="Resume_MBS_en.pdf" target="_blank" rel="noopener">Curriculum Vitae</a>
         </div>
         <div class="social">
-          <a href="mailto:mathieu.bourret@u-bordeaux.fr" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
-          <a href="https://scholar.google.com/citations?user=rbShwE0AAAAJ&hl=fr&oi=ao" target="_blank" aria-label="Google Scholar"><svg class="gs-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
-          <a href="https://www.linkedin.com/in/mathieu-bourret-soto/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
-          <a href="https://orcid.org/0000-0002-6090-420X" target="_blank" aria-label="ORCID"><i class="fab fa-orcid fa-lg"></i></a>
-          <a href="https://github.com/mathieubourretsoto" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+          <a href="mailto:mathieu.bourret@u-bordeaux.fr" aria-label="Email"><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
+          <a href="https://scholar.google.com/citations?user=rbShwE0AAAAJ&hl=fr&oi=ao" target="_blank" rel="noopener" aria-label="Google Scholar"><svg class="gs-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
+          <a href="https://www.linkedin.com/in/mathieu-bourret-soto/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+          <a href="https://orcid.org/0000-0002-6090-420X" target="_blank" rel="noopener" aria-label="ORCID"><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/></svg></a>
+          <a href="https://github.com/mathieubourretsoto" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" viewBox="0 0 496 512" aria-hidden="true"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
         </div>
       </div>
 
       <div class="intro">
-  <p>Hi there, and welcome to my website!</p>
-  <p>I&rsquo;m Mathieu Bourret Soto, a final-year PhD candidate at the Bordeaux School of Economics (University of Bordeaux), where I expect to defend my thesis in November 2026. My doctoral research examines the political economy of conflict and peacebuilding, using quasi-experimental and microeconometric methods to analyse the causes and consequences of violence in Latin America. I&rsquo;m also interested in climate change adaptation, using a more interdisciplinary lens. From March to July 2025, I was a visiting scholar at NOVAFRICA (Nova SBE).</p>
-  <p>I am on the 2026&ndash;2027 academic job market. Civic organisation is usually seen as a shield against violence; in my <a href="JMP_MBS.pdf" target="_blank">job market paper</a>, I show that in Colombia it can also expose, as the expansion of grassroots civic institutions raises targeted killings of social leaders where armed groups hold territory, while remaining neutral or protective elsewhere.</p>  
+        <p class="news"><strong>News.</strong> November 2026: I defended my PhD at the Bordeaux School of Economics.</p>
+        <p>Hi there, and welcome to my website!</p>
+  <p>I&rsquo;m Mathieu Bourret Soto. I hold a PhD in Economics from the <a href="https://www.bse.u-bordeaux.fr/" target="_blank" rel="noopener">Bordeaux School of Economics</a> (University of Bordeaux), where I defended my thesis on 13 November 2026. My doctoral research examines the political economy of conflict and peacebuilding, using quasi-experimental and microeconometric methods to analyse the causes and consequences of violence in Latin America. I&rsquo;m also interested in climate change adaptation, using a more interdisciplinary lens. From March to July 2025, I was a visiting scholar at <a href="https://novafrica.org/" target="_blank" rel="noopener">NOVAFRICA</a> (Nova SBE).</p>
+  <p>I am on the 2026&ndash;2027 academic job market. Civic organisation is usually seen as a shield against violence; in my <a href="JMP_MBS.pdf" target="_blank" rel="noopener">job market paper</a>, I show that in Colombia it can also expose, as the expansion of grassroots civic institutions raises targeted killings of social leaders where armed groups hold territory, while remaining neutral or protective elsewhere.</p>  
         <p>Feel free to check out my work, happy to chat about it anytime!</p>
-</div>
         <p class="fields">
           <span>Applied Microeconomics</span>
           <span>Political Economy</span>
@@ -409,6 +457,7 @@
           <span>Latin America</span>
           <span>Climate &amp; Health</span>
         </p>
+      </div>
     </section>
 
     <section id="research">
@@ -418,7 +467,7 @@
       <ul>
         <li>
           <strong>Civic Expansion and Targeted Violence under Armed Governance: Evidence from Colombia</strong>.
-          <a class="paper-link" href="JMP_MBS.pdf" target="_blank">paper</a>
+          <a class="paper-link" href="JMP_MBS.pdf" target="_blank" rel="noopener">paper</a>
           <details class="abstract">
             <summary>Abstract</summary>
             <p>Do grassroots civic institutions protect local leaders from violence, or expose them? Using Colombia&rsquo;s <i>Juntas de Acci&oacute;n Comunal</i> (JACs) and a novel 65-year administrative panel, I exploit within-municipality variation in annual JAC registrations in a continuous-treatment difference-in-differences design. On the full panel, civic expansion raises subsequent targeted killings of social leaders: the average causal effect is positive and significant, on the order of one additional killing for every ninety new JACs. This effect is concentrated in conflict municipalities and is neutral or protective where armed groups are absent; it is strongest where armed governance is durable, a descriptive gradient identified under stronger assumptions than the baseline. A second finding bounds the threat: killings do not reduce subsequent JAC registrations at any horizon, so targeting does not suppress the formation of new boards, though registration is an imperfect proxy for whether they keep functioning. A leader is targeted for their role in the network, not as an individual, so collective protection is the relevant policy lever.</p>
@@ -426,11 +475,18 @@
         </li>
       </ul>
 
+      <h3>PhD Thesis</h3>
+      <ul>
+        <li>
+          <strong>The Institutional Legacy of Violence: Three Essays in the Political Economy of Trust, Attitudes, and Conflict in Latin America</strong>. Defended on 13 November 2026, University of Bordeaux. Supervisors: Matthieu Cl&eacute;ment and &Eacute;ric Rougier.
+        </li>
+      </ul>
+
       <h3>Publications</h3>
       <ul>
         <li>
   <strong>&ldquo;This is our Legacy&rdquo;: Youth Exposure to Repression and Trust in Institutions</strong>, <em>Journal of Institutional Economics, 22:e47, 2026</em>.
-  <a class="paper-link" href="https://doi.org/10.1017/S1744137426100782" target="_blank">paper</a>
+  <a class="paper-link" href="https://doi.org/10.1017/S1744137426100782" target="_blank" rel="noopener">paper</a>
           <details class="abstract">
             <summary>Abstract</summary>
             <p>This paper examines how youth exposure to political repression is associated with long-term trust in public institutions in Chile, drawing on the impressionable years hypothesis. I exploit variation in proximity to pre-1970 military bases as a proxy for local repression intensity. Individuals who were in their critical period (ages 17–25) at the 1973 coup exhibit significantly lower trust in the <i>Carabineros</i> (national police) decades later, with similar effects for those aged 10–16. This effect is a relative one: the <i>Carabineros</i> remain the most trusted institution across all cohorts, with exposure creating a persistent trust gap rather than absolute mistrust. Trust in representative institutions (government, presidency) is not significantly affected, indicating institution-specific legacies. Migration, university attendance, and residence in the capital do not account for the results. Early-life exposure to repression is associated with a durable, institution-specific deficit in political trust, underscoring the long shadow of political violence on democratic consolidation.</p>
@@ -438,7 +494,7 @@
         </li>
         <li>
           <strong>Understanding Individual Adaptation to Arboviral Diseases Risk: A Systematic Review of Behavioural Determinants of Prevention and Meta-Analysis for non-tropical countries</strong>, with Elisa Delor and Marl&egrave;ne Guillon. <em>International Journal of Infectious Diseases, 170(108845), 2026</em>.
-          <a class="paper-link" href="https://www.sciencedirect.com/science/article/pii/S1201971226004807" target="_blank">paper</a>
+          <a class="paper-link" href="https://www.sciencedirect.com/science/article/pii/S1201971226004807" target="_blank" rel="noopener">paper</a>
           <details class="abstract">
             <summary>Abstract</summary>
             <p>The global spread of <i>Aedes albopictus</i>, a vector of dengue, chikungunya, and Zika, has caused rising autochthonous cases in non-tropical regions. This review synthesizes evidence on psychological and social determinants of individual preventive behaviors in non-endemic settings. Following PRISMA 2020 guidelines, PubMed and Web of Science were searched for peer-reviewed quantitative studies published up to January 6, 2026. Eligible studies reported associations between individual-level psychosocial factors (e.g., risk perception) and preventive behaviors in adults. Effect sizes from multivariate analyses were converted to correlation coefficients (r) and pooled using random-effects meta-analysis. Moderator analyses examined zone type (subtropical vs temperate) and world region (Asia-Pacific, Europe, United States). Of 8531 unique records screened, 226 studies were included, with 62 in non-tropical settings. Thirteen variables across 39 studies met criteria for meta-analysis. Preventive behaviors were strongly influenced by perceived barriers, perception scores, risk perception, perceived severity, and knowledge about MBDs. The effect of knowledge was stronger in subtropical countries and Asia-Pacific countries compared to temperate countries and the United States. Tailored communication strategies in non-endemic regions are essential to support individual adaptation as <i>Aedes albopictus</i> expands. Campaigns should enhance public knowledge of MBDs as well as awareness of individual and collective health risks and highlight simple, effective preventive measures.</p>
@@ -446,7 +502,7 @@
         </li>
         <li>
           <strong>Prevalence and factors associated with the adoption of heat-adaptive behaviors among residents of a French southern region</strong>, with Marl&egrave;ne Guillon. <em>Journal of Environmental Psychology, 109(102883), 2026</em>.
-          <a class="paper-link" href="https://doi.org/10.1016/j.jenvp.2025.102883" target="_blank">paper</a>
+          <a class="paper-link" href="https://doi.org/10.1016/j.jenvp.2025.102883" target="_blank" rel="noopener">paper</a>
           <details class="abstract">
             <summary>Abstract</summary>
             <p>Heatwaves are becoming more frequent and intense, making it essential to examine individual protective strategies against their negative health effects. We conducted a survey (N = 1,515) in summer 2022 to investigate the prevalence of eight heat-adaptive behaviors (HABs) and the factors associated with their adoption. The population implemented the eight HABs heterogeneously, with closing shutters, blinds, or curtains and going to a cooler or air-conditioned place being the most and least adopted HABs, respectively. Using the Protective Action Decision Model (PADM), we found that greater perceived efficacy and descriptive norms were associated with higher adoption of HABs, as measured by an adaptation index, while greater perceived barriers led to lower adaptation. Conversely, demographic characteristics and self-reported health did not seem to be important predictors of adaptation. Our disaggregated analysis indicated that sociodemographic variables, such as gender or income, and threat perception variables exerted a heterogeneous impact on the eight HABs. Our study identified key drivers of HAB adoption that could help health authorities shape their communication campaigns to improve the population's adaptation to heatwaves.</p>
@@ -454,7 +510,7 @@
         </li>
         <li>
           <strong>What drives adaptive behaviours during heatwaves? A systematic review with a meta-analysis</strong>, with Marl&egrave;ne Guillon. <em>Climate Policy, 24(8), 2024</em>.
-          <a class="paper-link" href="https://doi.org/10.1080/14693062.2024.2388225" target="_blank">paper</a>
+          <a class="paper-link" href="https://doi.org/10.1080/14693062.2024.2388225" target="_blank" rel="noopener">paper</a>
           <details class="abstract">
             <summary>Abstract</summary>
             <p>Global warming will lead to more frequent and intense heatwaves across all regions of the world in the coming decades. Adaptation at the individual level plays a key role in helping populations cope with these extreme events. This study undertakes a systematic review of the academic literature on the determinants of heat-adaptive behaviours (HABs) following the Preferred Reporting Items for Systematic reviews and Meta-Analyses (PRISMA) guidelines. A Boolean algorithm was used on two online databases (PubMed and Web of Science Core Collection) to retrieve 73 relevant, quantitative, peer-reviewed papers. All included studies focus on high-income economies (N = 48) or middle-income economies (MIEs, N = 25). A meta-analysis was performed on 34 studies using a random-effects model, with an emphasis on heat-related perceptions (perceived efficacy, risk and threat) and heat-related knowledge (HRK), as these variables are the most likely levers of behavioural change. Perceived efficacy, HRK, perceived threat and gender (i.e. being female) are positively associated with the adoption of HABs. A moderation analysis reveals heterogeneity in the effect of these variables by country income group, with low HRK and perceived threat constituting stronger barriers to HABs in MIEs. This study also highlights various gaps in the current literature, regarding the populations studied, the statistical methods used, and the lack of standardization of HABs and perception concepts.</p>
@@ -490,32 +546,48 @@
 
     <section id="conferences">
       <h2>Workshops and Conferences</h2>
-      <ul>
-        <li><strong>July 2026</strong> &ndash; 2nd Junior Workshop Economics of Latin Americas &ndash; Berlin (Germany)</li>
-        <li><strong>February 2026</strong> &ndash; BxSE Doctoral Seminars &ndash; Bordeaux (France)</li>
-        <li><strong>October 2025</strong> &ndash; Workshop on Ibero-American Development &ndash; G&ouml;ttingen (Germany)</li>
-        <li><strong>August 2025</strong> &ndash; EEA 2025 &ndash; Bordeaux (France)</li>
-        <li><strong>May 2025</strong> &ndash; Nova SBE PhD Research Group &ndash; Lisbon (Portugal)</li>
-        <li><strong>May 2025</strong> &ndash; 2nd WAP Conference &ndash; Bordeaux (France)</li>
-        <li><strong>January 2025</strong> &ndash; Winter School on Inequality and Social Welfare Theory (IT18) &ndash; Canazei (Italy)</li>
-        <li><strong>December 2024</strong> &ndash; BxSE Doctoral Seminars &ndash; Bordeaux (France)</li>
-        <li><strong>May 2024</strong> &ndash; WAPLAC Workshop #1 &ndash; San Jos&eacute; (Costa Rica)</li>
-        <li><strong>January 2024</strong> &ndash; AFEDEV Doctoral Days: 2024 Edition &ndash; Paris (France)</li>
-        <li><strong>December 2023</strong> &ndash; 45th Conference of French Health Economists (JESF) &ndash; Bordeaux (France)</li>
-        <li><strong>November 2023</strong> &ndash; BxSE Doctoral Seminars &ndash; Bordeaux (France)</li>
-      </ul>
+      <div class="talks">
+        <h4 class="talks-year">2026</h4>
+        <ul>
+          <li><strong>July</strong> &ndash; 2nd Junior Workshop Economics of Latin Americas &ndash; Berlin (Germany)</li>
+          <li><strong>February</strong> &ndash; BxSE Doctoral Seminars &ndash; Bordeaux (France)</li>
+        </ul>
+        <h4 class="talks-year">2025</h4>
+        <ul>
+          <li><strong>October</strong> &ndash; Workshop on Ibero-American Development &ndash; G&ouml;ttingen (Germany)</li>
+          <li><strong>August</strong> &ndash; EEA 2025 &ndash; Bordeaux (France)</li>
+          <li><strong>May</strong> &ndash; Nova SBE PhD Research Group &ndash; Lisbon (Portugal)</li>
+          <li><strong>May</strong> &ndash; 2nd WAP Conference &ndash; Bordeaux (France)</li>
+          <li><strong>January</strong> &ndash; Winter School on Inequality and Social Welfare Theory (IT18) &ndash; Canazei (Italy)</li>
+        </ul>
+        <h4 class="talks-year">2024</h4>
+        <ul>
+          <li><strong>December</strong> &ndash; BxSE Doctoral Seminars &ndash; Bordeaux (France)</li>
+          <li><strong>May</strong> &ndash; WAPLAC Workshop #1 &ndash; San Jos&eacute; (Costa Rica)</li>
+          <li><strong>January</strong> &ndash; AFEDEV Doctoral Days: 2024 Edition &ndash; Paris (France)</li>
+        </ul>
+        <h4 class="talks-year">2023</h4>
+        <ul>
+          <li><strong>December</strong> &ndash; 45th Conference of French Health Economists (JESF) &ndash; Bordeaux (France)</li>
+          <li><strong>November</strong> &ndash; BxSE Doctoral Seminars &ndash; Bordeaux (France)</li>
+        </ul>
+      </div>
     </section>
 
     <section id="teaching">
       <h2>Teaching</h2>
-      <p>Mathematical Tools &amp; Inferential Statistics, Computer Science (Advanced Excel &amp; Python)</p>
+      <p><strong>Teaching Assistant</strong>, University of Bordeaux</p>
+      <ul>
+        <li><em>Mathematical Tools &amp; Inferential Statistics</em>, B.Sc. Economics (2024)</li>
+        <li><em>Computer Science</em> (Advanced Excel &amp; Python), B.Sc. Economics (2023)</li>
+      </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>
         <strong>Work address</strong><br>
-        Bordeaux School of Economics (BxSE, University of Bordeaux)<br>
+        <a href="https://www.bse.u-bordeaux.fr/" target="_blank" rel="noopener">Bordeaux School of Economics</a> (BxSE, University of Bordeaux)<br>
         Office H2-205<br>
         16 avenue L&eacute;on Duguit<br>
         33608 Pessac, France
@@ -530,7 +602,8 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
+      const open = document.getElementById("navLinks").classList.toggle("show");
+      document.querySelector(".menu-toggle").setAttribute("aria-expanded", open);
     }
 
     function scrollToTop(event) {
@@ -550,8 +623,22 @@
       const menuButton = document.querySelector(".menu-toggle");
       if (!navLinks.contains(e.target) && !menuButton.contains(e.target)) {
         navLinks.classList.remove("show");
+        menuButton.setAttribute("aria-expanded", "false");
       }
     });
+
+    // Highlight the nav link of the section currently on screen
+    const navAnchors = document.querySelectorAll('.nav-links a');
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          navAnchors.forEach(function (a) {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (sec) { observer.observe(sec); });
   </script>
 </body>
 </html>
